@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Earnings</string>
+    <string name="calculate_earnings">Calculator Earnings</string>
+    <string name="calculate_apr">Calculator APR</string>
+    <string name="principal">Principal</string>
+    <string name="investment_days">Investment Days</string>
+    <string name="percentage_rate">Annual Percentage Rate</string>
+    <string name="earnings">Earnings</string>
+    <string name="apr">APR</string>
+    <string name="cal_percentage_rate">APR: %s</string>
+    <string name="cal_earnings">Earnings: %s</string>
+    <string name="calculate">Calculate</string>
+    <string name="capital_amount">Capital Amount: %s</string>
+    <string name="clear">Clear</string>
+</resources>
