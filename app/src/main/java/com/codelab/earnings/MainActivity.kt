@@ -35,6 +35,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -98,7 +99,7 @@ fun EarningsApp(
             ),
             modifier = Modifier
                 .padding(bottom = 16.dp)
-                .fillMaxWidth()
+                .fillMaxWidth(),
         )
         if (uiState.principal.isNotEmpty()) {
             Text(
@@ -123,7 +124,7 @@ fun EarningsApp(
             ),
             modifier = Modifier
                 .padding(bottom = 32.dp)
-                .fillMaxWidth()
+                .fillMaxWidth(),
         )
         if (!uiState.aprCal) {
             EditNumberField(
@@ -137,7 +138,7 @@ fun EarningsApp(
                 ),
                 modifier = Modifier
                     .padding(bottom = 24.dp)
-                    .fillMaxWidth()
+                    .fillMaxWidth(),
             )
         } else {
             EditNumberField(
@@ -151,7 +152,7 @@ fun EarningsApp(
                 ),
                 modifier = Modifier
                     .padding(bottom = 24.dp)
-                    .fillMaxWidth()
+                    .fillMaxWidth(),
             )
         }
         APRCalRow(
@@ -207,7 +208,7 @@ fun EditNumberField(
     value: String,
     onValueChange: (String) -> Unit,
     keyboardOptions: KeyboardOptions,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     OutlinedTextField(
         value = value,
@@ -248,6 +249,7 @@ fun APRCalRow(
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.End)
+                .testTag("mySwitch")
         )
     }
 }

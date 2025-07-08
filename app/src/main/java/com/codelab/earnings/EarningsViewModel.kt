@@ -93,6 +93,7 @@ class EarningsViewModel : ViewModel() {
     }
 
     private fun integerToChinese(integer: String): String {
+        if (integer.all { it == '0' }) return ""
         if (integer == "0") return ""
         var result = ""
         if (integer.length > 8) {
