@@ -32,7 +32,7 @@ class EarningsViewModelTest {
         assertEquals(expected, result)
     }
 
-        @Test
+    @Test
     fun testDigitToChinese() {
         assertEquals("零元整", viewModel.digitToChinese(0.0))
         assertEquals("壹元整", viewModel.digitToChinese(1.0))

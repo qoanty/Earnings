@@ -249,7 +249,7 @@ fun APRCalRow(
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.End)
-                .testTag("mySwitch")
+                .testTag(stringResource(id = R.string.switching))
         )
     }
 }
