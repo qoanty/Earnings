@@ -2,16 +2,16 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [main]
+    branches: main
   pull_request:
-    branches: [main]
+    branches: main
   schedule:
     - cron: '46 23 * * 2'
 
 jobs:
   analyze:
     name: Analyze
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     permissions:
       # required for all workflows
       security-events: write
@@ -24,7 +24,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [java-kotlin]
+        language: java-kotlin
+        build-mode: autobuild
 
     steps:
     - name: Checkout repository
@@ -35,6 +36,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
+        build-mode: ${{ matrix.build-mode }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
