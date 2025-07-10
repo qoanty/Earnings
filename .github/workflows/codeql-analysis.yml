@@ -24,8 +24,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: java-kotlin
-        build-mode: autobuild
+        include:
+        - language: java-kotlin
+          build-mode: autobuild
 
     steps:
     - name: Checkout repository
