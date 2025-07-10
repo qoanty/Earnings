@@ -41,29 +41,6 @@ jobs:
           name: Signed app bundle
           path: ${{steps.sign_app.outputs.signedFile}}
 
-      # https://github.com/marketplace/actions/auto-changelog
-      - name: Changelog
-        uses: ardalanamini/auto-changelog@v4
-        id  : changelog
-        with:
-          github-token            : ${{ github.token }}
-          commit-types            : |
-            feat    : New Features
-            fix     : Bug Fixes
-            build   : Build System & Dependencies
-            perf    : Performance Improvements
-            docs    : Documentation
-            test    : Tests
-            refactor: Refactors
-            chore   : Chores
-            ci      : CI
-            style   : Code Style
-            revert  : Reverts
-          default-commit-type     : Other Changes
-          mention-authors         : true
-          mention-new-contributors: true
-          include-compare-link    : true
-
       # https://github.com/marketplace/actions/gh-release
       - name: Release APK
         uses: softprops/action-gh-release@v2
