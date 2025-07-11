@@ -1,5 +1,5 @@
 <div align="center">
-<img src="app/src/main/ic_launcher-playstore.png" width="auto" height="auto" alt="Earnings">
+<img src="app/src/main/ic_launcher-playstore.png" width="100" height="100" alt="Earnings">
 
 # 收益计算器
 
